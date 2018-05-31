@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="page.main.title">
+        <action method="setPageTitle">
+            <argument translate="true" name="title" xsi:type="string">Page Title of Custom Template</argument>
+        </action>
+    </referenceBlock>
+    <referenceContainer name="content">
+        <block class="Unit3\PlayWithLayout\Block\Custom" name="unit3.content.custom" template="Unit3_PlayWithLayout::custom.phtml">
+            <arguments>
+                <argument name="background_color" xsi:type="string">lightskyblue</argument>
+            </arguments>
+        </block>
+        <referenceBlock name="test.test" remove="true" />
+    </referenceContainer>
+</page>
